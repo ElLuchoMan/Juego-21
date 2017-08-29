@@ -21,8 +21,7 @@ def revolver(mazo): #Revuelve el mazo de cartas que tenemos#
 
 def pide_carta(mano,mazo): #Pide una carta al dealer#
     mano.append(mazo[0])
-    mazo.remove(mazo[0])
-    return mazo
+    return mazo[1:]
 
 def valor_carta(carta,suma): #Da un valor a la carta segun su nombre#
     if carta[1] == 'J':
@@ -32,7 +31,7 @@ def valor_carta(carta,suma): #Da un valor a la carta segun su nombre#
     elif carta[1] == 'K':
         return 10
     elif carta[1] == 'A':
-        if suma>11:
+        if suma>10:
             return 1
         else:
             return 11
