@@ -59,11 +59,11 @@ def repartir(mazo,dealer,player): #Reparte las cartas al principio de la partida
     return mazo[4:]
   
 def sumar_mano(mano,suma):
-if mano ==[]:
-return suma
-else:
-for x in mano:
-return sumar_mano(mano[1:],suma+valor_carta(x,suma))
+    if mano ==[]:
+        return suma
+    else:
+        for x in mano:
+            return sumar_mano(mano[1:],suma+valor_carta(x,suma))
 
 def jugar(mazo,jugador,casa,estado,turno,suma,sumacom): #Empieza el juego de verdad#
 
@@ -111,7 +111,7 @@ def jugar(mazo,jugador,casa,estado,turno,suma,sumacom): #Empieza el juego de ver
             else:
               print("\n Has Ganado")
               ver_mano_casa_final(casa)
-              print ("\n fin del juego")
+              print ("\n fin del juego___________________________________________\n")
               return True
     
 
